@@ -1,0 +1,444 @@
+/* =========================
+   BASE RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#0f0f0f;
+    color:white;
+    font-family:Georgia, serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:100%;
+    max-width:750px;
+    margin:0 auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1{
+    font-size:40px;
+    font-weight:400;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+
+/* =========================
+   PARAGRAPH / STORY TEXT
+========================= */
+
+p{
+    font-size:16px;
+    line-height:1.75;
+    color:#e5e5e5;
+}
+
+/* story box */
+.story{
+    font-size:16px;
+    line-height:1.8;
+    max-width:650px;
+    margin:20px auto;
+    padding:18px;
+    text-align:center;
+    background:rgba(0,0,0,0.45);
+    border-radius:15px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    background:#fff;
+    color:#000;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   SPARKLES
+========================= */
+
+#sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.sparkle{
+    position:fixed;
+    top:-20px;
+    color:gold;
+    font-size:12px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(110vh);}
+}
+
+/* =========================
+   STORY IMAGE
+========================= */
+
+.story-photo{
+    width:260px;
+    border-radius:15px;
+    margin:20px auto;
+    display:block;
+}
+
+/* =========================
+   ALBUM GRID (IMPORTANT FIX)
+========================= */
+
+.album{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.album img{
+    width:100%;
+    border-radius:12px;
+    display:block;
+}
+
+/* =========================
+   TURN AROUND FIX (CENTER)
+========================= */
+
+.turn-around{
+    text-align:center;
+    font-size:22px;
+    font-weight:600;
+    margin:50px auto;
+}
+
+/* =========================
+   STORY LAYOUT (OPTIONAL FLEX)
+========================= */
+
+.story-with-photo{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    margin:30px 0;
+}
+
+.story-with-photo img{
+    width:220px;
+    border-radius:15px;
+}
+
+.story-with-photo .text{
+    flex:1;
+    text-align:left;
+}
+
+/* mobile */
+@media(max-width:768px){
+    .story-with-photo{
+        flex-direction:column;
+    }
+
+    .story-with-photo img{
+        width:100%;
+    }
+
+    .story-with-photo .text{
+        text-align:center;
+    }
+}
+
+/* =========================
+   OPTIONAL: BACKGROUND PAGES
+========================= */
+
+.gh4-page::before,
+.icecream-page::before,
+.journey-page::before,
+.story-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:-1;
+    filter:brightness(0.6);
+}
+/* =========================
+   BACKGROUND FIX (ALL PAGES)
+========================= */
+
+.gh4-page::before{
+    background-image:url("images/us.jpg.jpg");
+}
+
+.story-page::before{
+    background-image:url("images/usforsarita.jpg");
+}
+
+.icecream-page::before{
+    background-image:url("images/me-and-maahii.jpg");
+}
+
+.journey-page::before{
+    background-image:url("images/usforjouney.jpg");
+}
+
+body.icecream-page,
+body.story-page,
+body.gh4-page,
+body.journey-page{
+    position:relative;
+}
+.album img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.story-img{
+    width:100%;
+    max-width:450px;
+    display:block;
+    margin:20px auto;
+}
+h1{
+    font-size:32px;
+}
+
+button{
+    font-size:14px;
+    padding:10px 20px;
+}
+
+p{
+    font-size:15px;
+}
+/* =========================
+   INDEX PAGE PREMIUM FIX
+========================= */
+
+body{
+    display:block;   /* important: flex hata ke normal flow */
+}
+
+.container{
+    max-width:800px;
+    margin:0 auto;
+    padding:80px 25px;
+    text-align:center;
+}
+
+/* Title proper hero feel */
+h1{
+    font-size:60px;
+    font-weight:400;
+    line-height:1.2;
+    margin-bottom:30px;
+}
+
+p{
+    font-size:40px;
+    line-height:1.7;
+    color:#e5e5e5;
+}
+
+button{
+    font-size:40px;
+    padding:18px 38px;
+    margin-top:80px;   /* text aur button ke beech zyada gap */
+    border-radius:14px;
+}
+.container{
+    max-width:850px;
+    margin:0 auto;
+    padding:100px 30px;
+    text-align:left;
+}
+button{
+    display:block;
+    margin:50px auto 0 auto;
+}
+.our-story{
+    text-align:center;
+    margin-top:20px;
+    font-size:24px;
+} 
+.gh4-text{
+    text-align:center;
+    font-size:22px;
+    line-height:2;
+    max-width:700px;
+    margin:0 auto;
+}
+.big-btn{
+    font-size:20px;
+    padding:18px 40px;
+    margin:40px auto 0 auto;
+    display:block;
+}
+.gh4-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.gh4-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/us.jpg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-1;
+}
+.gh4-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.gh4-text{
+    text-align:center;
+    font-size:24px;
+    line-height:2;
+    max-width:700px;
+    margin:0 auto;
+}
+
+.big-btn{
+    font-size:22px !important;
+    padding:20px 45px !important;
+    display:block;
+    margin:50px auto 0 auto;
+}
+
+.gh4-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/us.jpg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-1;
+}
+.sarita-page{
+    position:relative;
+    min-height:100vh;
+}
+
+.sarita-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/usforsarita.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-1;
+}
+.sarita-page .story{
+    max-width:700px;
+    margin:25px auto;
+    padding:20px;
+    font-size:18px;
+    line-height:1.9;
+    text-align:center;
+    background:rgba(0,0,0,0.45);
+    border-radius:18px;
+}
+.sarita-page .album{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:30px;
+}
+
+.sarita-page .album img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:16px;
+}
+.turn-around{
+    text-align:center;
+    font-size:28px;
+    font-weight:600;
+    margin:60px auto;
+}
+.sarita-page .container{
+    text-align:center;
+}
+
+.sarita-page h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:30px;
+}
+.sarita-page .album{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:30px;
+}
+
+.sarita-page .album img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+    box-shadow:0 5px 20px rgba(0,0,0,0.35);
+}
